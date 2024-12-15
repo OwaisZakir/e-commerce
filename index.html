@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags for character set and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Website</title>
 
     <!-- =========================== -->
-    <!-- Bootstrap 5.3.0 CSS (Latest version) -->
+    <!-- External CSS Links -->
     <!-- =========================== -->
+
+    <!-- Bootstrap 5.3.0 CSS (Latest version) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -15,9 +18,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- =========================== -->
     <!-- FontAwesome Icons (Latest version) -->
-    <!-- =========================== -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -26,23 +27,24 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- =========================== -->
     <!-- Our Custom CSS file -->
-    <!-- =========================== -->
     <link rel="stylesheet" href="./css/utilites.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <!-- =========================== -->
+    <!-- Header Section -->
+    <!-- =========================== -->
     <header class="bg-light fixed-top">
       <div id="header__top" class="container-fluid">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <!-- Logo / Brand -->
-            <a class="navbar-brand" href="#"
-              ><img src="./image/logo/logo-mian.png" alt="Logo"
-            /></a>
+            <a class="navbar-brand" href="#">
+              <img src="./image/logo/logo-mian.png" alt="Logo" />
+            </a>
 
             <!-- Toggle button for mobile -->
             <button
@@ -86,63 +88,233 @@
       </div>
     </header>
 
+    <!-- =========================== -->
+    <!-- Home Section with Slider -->
+    <!-- =========================== -->
     <section id="home">
-      <div class="container-fluid home__slide-1 h-100">
-        <div class="container-xxl h-100">
-          <div class="row h-100">
-            <div
-              class="left col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column justify-content-center align-items-start"
-            >
-              <h1>Welcome to Our E-Commerce Website!</h1>
+      <div class="slider">
+        <div class="slider__slides">
+          <!-- Slide 1 -->
+          <div class="slider__slide home__slide-1">
+            <div class="slider__content text-center">
+              <h1>Discover the Best Deals</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus earum, inventore laudantium, assumenda labore quod
-                delectus atque repellendus quidem nisi nisi labore perspiciatis
-                doloribus, magnam voluptatum.
+                Find amazing discounts on all your favorite products today.
+                Don't miss out!
               </p>
               <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="container-fluid home__slide-2 h-100">
-        <div class="container-xxl h-100">
-          <div class="row h-100">
-            <div
-              class="left col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column justify-content-center align-items-start"
-            ></div>
-            <div
-              class="right col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column justify-content-center align-items-start"
-            >
-              <h1>Another Section or Content</h1>
-              <p>Additional content or image for the right side</p>
+          <!-- Slide 2 -->
+          <div class="slider__slide home__slide-2">
+            <div class="slider__content text-center">
+              <h1>Exclusive Offers Just for You</h1>
+              <p>
+                Enjoy unbeatable prices and exclusive offers. Shop now and save
+                big!
+              </p>
+              <a href="#" class="btn btn-primary">Explore Offers</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider__slide home__slide-3">
+            <div class="slider__content text-center">
+              <h1>Top Trending Products</h1>
+              <p>
+                Check out the latest trends in fashion, electronics, and more.
+                Stay ahead!
+              </p>
+              <a href="#" class="btn btn-primary">Shop the Trends</a>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slider__slide home__slide-4">
+            <div class="slider__content text-center">
+              <h1>Best-Selling Items</h1>
+              <p>
+                Discover our best-sellers and find out why customers love them!
+              </p>
+              <a href="#" class="btn btn-primary">View Best Sellers</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Empty slides with placeholders -->
-      <div class="container-fluid home__slide-3 h-100">
-        <!-- Content for slide 3 -->
+        <!-- Slider Dots -->
+        <div class="slider__dots text-center">
+          <div class="slider__dot active" data-slide="0"></div>
+          <div class="slider__dot" data-slide="1"></div>
+          <div class="slider__dot" data-slide="2"></div>
+          <div class="slider__dot" data-slide="3"></div>
+        </div>
       </div>
-      <div class="container-fluid home__slide-4 h-100">
-        <!-- Content for slide 4 -->
+    </section>
+    <!-- =========================== -->
+    <!-- Extra Content Section -->
+    <!-- =========================== -->
+
+    <section id="extra">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <!-- Repeat this block 10 times -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">FLIP CARD</p>
+                  <p>Hover Me</p>
+                </div>
+                <div
+                  class="flip-card-back d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">BACK</p>
+                  <p>Leave Me</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat this block 10 times -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">FLIP CARD</p>
+                  <p>Hover Me</p>
+                </div>
+                <div
+                  class="flip-card-back d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">BACK</p>
+                  <p>Leave Me</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat this block 10 times -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">FLIP CARD</p>
+                  <p>Hover Me</p>
+                </div>
+                <div
+                  class="flip-card-back d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="title">BACK</p>
+                  <p>Leave Me</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more flip cards as needed -->
+        </div>
       </div>
     </section>
 
-    <!-- ========================== JavaScript Links Here ========================== -->
+    <!-- =========================== -->
+    <!-- Shop Content Section -->
+    <!-- =========================== -->
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section pt-9">
+      <div class="container">
+        <!-- Section Heading -->
+        <h2 class="text-center mb-4">Shop Our Products</h2>
+
+        <!-- Shop Items Grid -->
+        <div class="row">
+          <!-- Shop Item 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="shop-item">
+              <img
+                src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+                alt="Product 1"
+                class="img-fluid"
+              />
+              <h3>Product Name 1</h3>
+              <p class="price">$19.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Shop Item 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="shop-item">
+              <img
+                src="https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/2.png"
+                alt="Product 2"
+                class="img-fluid"
+              />
+              <h3>Product Name 2</h3>
+              <p class="price">$29.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Shop Item 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="shop-item">
+              <img
+                src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+                alt="Product 3"
+                class="img-fluid"
+              />
+              <h3>Product Name 3</h3>
+              <p class="price">$39.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Shop Item 4 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="shop-item">
+              <img
+                src="https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
+                alt="Product 4"
+                class="img-fluid"
+              />
+              <h3>Product Name 4</h3>
+              <p class="price">$49.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-end">
+            <a href="#" class="btn fs-5 text-muted">See All Product</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- =========================== -->
+    <!-- JavaScript Links Here -->
+    <!-- =========================== -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
       integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Custom Script File -->
     <script src="./js/script.js"></script>
   </body>
 </html>
