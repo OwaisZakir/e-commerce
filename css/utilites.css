@@ -1,0 +1,122 @@
+@import "./style.css";
+
+body {
+  background: var(--background-light);
+}
+
+section {
+  height: 100vh;
+}
+/* Text Colors */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-dark {
+  color: var(--text-color) !important;
+}
+
+.text-light {
+  color: var(--text-light) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-link {
+  color: var(--link-color) !important;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.bg-light {
+  background-color: var(--background-light) !important;
+}
+
+.bg-dark {
+  background-color: var(--background-dark) !important;
+}
+
+/* Button Colors */
+.btn-primary {
+  background-color: var(--button-color) !important;
+  color: var(--background-light) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-color) !important;
+}
+
+.btn-success {
+  background-color: var(--alert-success) !important;
+}
+
+.btn-warning {
+  background-color: var(--alert-warning) !important;
+}
+
+.btn-danger {
+  background-color: var(--alert-danger) !important;
+}
+
+.btn-info {
+  background-color: var(--alert-info) !important;
+}
+
+/* Border Colors */
+.border-primary {
+  border: 1px solid var(--primary-color) !important;
+}
+
+.border-secondary {
+  border: 1px solid var(--secondary-color) !important;
+}
+
+.border-accent {
+  border: 1px solid var(--accent-color) !important;
+}
+
+.border-light {
+  border: 1px solid var(--border-color) !important;
+}
+
+.border-dark {
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* Shadow Effects */
+.shadow-light {
+  box-shadow: var(--shadow-light) !important;
+}
+
+.shadow-dark {
+  box-shadow: var(--shadow-dark) !important;
+}
+
+.shadow-3d {
+  box-shadow: var(--lock-shadow-default) !important;
+}
+
+.shadow-3d-hover {
+  box-shadow: var(--lock-shadow-hover) !important;
+}

@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #007bff; /* Bright Blue */
+  --secondary-color: #004085; /* Deep Blue */
+  --accent-color: #ff7f50; /* Orange */
+  --background-color: #f8f9fa; /* Light Gray */
+  --button-color: #28a745; /* Green */
+  --button-hover-color: #218838; /* Dark Green on Hover */
+  --text-color: #343a40; /* Dark Gray Text */
+  --secondary-text-color: #6c757d; /* Light Gray Text */
+  --link-color: #0056b3; /* Blue for Links */
+  --border-color: #d6e4ff; /* Light Blue for Borders */
+
+  /* Alert Colors */
+  --alert-success: #28a745; /* Green for Success */
+  --alert-warning: #ffc107; /* Yellow for Warnings */
+  --alert-danger: #dc3545; /* Red for Errors or Danger */
+  --alert-info: #17a2b8; /* Blue for Info Alerts */
+
+  /* Background Colors */
+  --background-dark: #343a40; /* Dark Background */
+  --background-light: #ffffff; /* Light Background */
+
+  /* Text Colors */
+  --text-light: #f8f9fa; /* Light Text */
+  --text-muted: #6c757d; /* Muted Text */
+
+  /* Border and Shadow Colors */
+  --border-dark: #ced4da; /* Darker border */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.2); /* Dark shadow */
+
+  /* 3D Shadow Variables */
+  --lock-shadow-default: 0 4px 8px var(--shadow-light),
+    0 8px 16px var(--shadow-dark);
+  --lock-shadow-hover: 0 4px 12px var(--shadow-dark),
+    0 10px 20px var(--shadow-light);
+  --lock-translate: -5px; /* Hover movement */
+}
+* {
+  word-wrap: break-word;
+}
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+/* Basic Lock Element */
+.lock {
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary-color); /* Using your primary color */
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Smooth transition for the box-shadow */
+  box-shadow: var(--lock-shadow-default); /* Default shadow */
+}
+
+/* 3D Box Shadow on Hover */
+.lock:hover {
+  box-shadow: var(--lock-shadow-hover); /* Hover shadow */
+  transform: translateY(
+    var(--lock-translate)
+  ); /* Slight upward movement for added effect */
+}
+
+/* ========== Home Section ============= */
+
+#home {
+  padding-top: 4.2em;
+}
+
+.home__slide-1 {
+  background-position: center center;
+  background-image: url(https://qx-gluck.myshopify.com/cdn/shop/files/banner-3.jpg?v=1704873000&width=1512);
+}
+.home__slide-2 {
+  background-position: center center;
+  background-image: url(https://qx-gluck.myshopify.com/cdn/shop/files/banner-6.jpg?v=1704873000&width=1512);
+}
+.home__slide-3 {
+  background-position: center center;
+  background-image: url(https://qx-gluck.myshopify.com/cdn/shop/files/banner-2.jpg?v=1704872980&width=1512);
+}
+.home__slide-4 {
+  background-position: center center;
+  background-image: url(https://qx-gluck.myshopify.com/cdn/shop/files/banner-1.jpg?v=1704872980&width=1512);
+} 
