@@ -1,20 +1,3 @@
-// Example of fetching data from an API (currently commented out)
-// let postApi = "https://dummyjson.com/products";
-
-// async function posts() {
-//   let response = await fetch(postApi);
-//   return response.json();
-// }
-// let data = posts();
-
-// data
-//   .then((posts) => {
-//     console.log(posts);
-//   })
-//   .catch((error) => {
-//     console.log("Error:", error);
-//   });
-
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slider__slide"); // Select all the slide elements
   const dots = document.querySelectorAll(".slider__dot"); // Select all the navigation dots
