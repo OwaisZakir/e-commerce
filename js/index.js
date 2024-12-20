@@ -18,14 +18,7 @@
 //   });
 
 
-// GSAP Animations for product cards (Load Animation)
-gsap.from(".product-card", {
-  opacity: 0,
-  y: 100,
-  duration: 1.2,
-  ease: "easeInOut",
-  stagger: 0.4, // Spread out the animations for each card
-});
+
 
 // Hover effect on the product cards
 document.querySelectorAll(".product-card").forEach(card => {
