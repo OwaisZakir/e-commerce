@@ -211,9 +211,20 @@ html::-webkit-scrollbar {
 /* Shop Section Styles */
 /* ================================ */
 
-
 #product-ShowCase {
   padding: 50px 20px;
+  background: linear-gradient(
+      45deg,
+      transparent 49%,
+      #4f46e4 49% 51%,
+      transparent 51%
+    ),
+    linear-gradient(-45deg, transparent 49%, #4f46e4 49% 51%, transparent 51%);
+  background-size: 3em 3em;
+  background-color: #ffffff;
+  opacity: 1;
+  background-attachment: fixed;
+  transition: background 0.3s ease;
 }
 
 .product-card {

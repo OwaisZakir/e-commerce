@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ff7f50; /* Coral color for a vibrant look */
+  background: url("https://img.freepik.com/premium-photo/top-view-online-shopping-concept-with-credit-card-smart-phone-computer-isolated-office-yellow-table-background_315337-5991.jpg?semt=ais_hybrid")
+    no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+  border-bottom: 4px solid #ff6347; /* Slight border to make it pop */
+}
+
+/* Header Title Styles */
+.header-title {
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+/* Link Styling */
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 5px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-link:hover {
+  color: #fcfcfc; /* Tomato red on hover */
+  border-bottom: 3px solid #fcfcfc; /* Underline effect */
+}
+
+/* Text Styling */
+.header-text {
+  font-weight: bold;
+  color: #fff; /* Keeping text white for good contrast */
+}
+
+/* Hover effect for header title */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+}

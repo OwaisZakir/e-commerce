@@ -2,13 +2,23 @@
 
 body {
   background: var(--background-light);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 section {
   height: 100vh;
+  scroll-snap-align: start;
+  scroll-margin-top: 20px;
 }
 #extra {
   height: fit-content;
+}
+a {
+  all: unset;
+}
+.pointer {
+  cursor: pointer;
 }
 /* Text Colors */
 .text-primary {
