@@ -1,5 +1,5 @@
 function goToShop() {
-  window.location.href = "../pages/shop.html";
+  window.location.href = "/pages/shop.html";
 }
 
 console.log(object);
