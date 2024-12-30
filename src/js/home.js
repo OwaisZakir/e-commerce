@@ -96,19 +96,102 @@ document.addEventListener("DOMContentLoaded", function () {
 //  =========== Products ==============
 // ==========================================================
 
-// GSAP Animations
-window.addEventListener('DOMContentLoaded', () => {
-  // Fade-in animation for the product cards
-  gsap.to('.product-card', { opacity: 1, duration: 1, stagger: 0.3 });
+// ============================ Products Js ===========
+async function getUsersOfGithub() {
+  console.log("inside function");
+  try {
+    let response = await fetch("https://dummyjson.com/products");
+    console.log(" response:", response);
+    let data = response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-  // Scale animation on hover for product images
-  const productImage = document.querySelectorAll('.product-card-img');
-  productImage.forEach(img => {
-      img.addEventListener('mouseenter', () => {
-          gsap.to(img, { scale: 1.05, duration: 0.3 });
-      });
-      img.addEventListener('mouseleave', () => {
-          gsap.to(img, { scale: 1, duration: 0.3 });
-      });
+let productHolder = document.querySelector("#products_holder");
+
+let productData = getUsersOfGithub();
+
+productData
+  .then((products) => {
+    console.log(products);
+    let data = products.products;
+    data.map((item) => {
+      productHolder.innerHTML += `
+      <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="${item.thumbnail}"
+                class="card-img-top product-card-img"
+                alt="${item.title}"
+              />
+              <div class="card-body product-card-body text-center">
+                <h4 class="card-title product-title">
+                 ${item.title}
+                </h4>
+                <h5 class="card-text product-price">${item.price}</h5>
+              </div>
+              <div class="card-footer product-footer">
+                <a href="#" class="btn view-more-btn" onClick="productId  (${item.id})">View More</a>
+              </div>
+            </div>
+          </div>
+      `;
+    });
+  })
+  .catch((err) => {
+    console.log(err);
   });
-});
+
+function productId(productId) {
+  console.log(productId);
+  localStorage.setItem("product_id", productId);
+  setTimeout(() => {
+    window.location.href = "./dynamicSingleProducts.html";
+    // console.log(url);
+  }, 1000);
+}
+
+// ========================== Product Animation =======
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   // Fade-in animation for the product cards
+//   gsap.fromTo(
+//     ".product-card",
+//     { opacity: 0, y: 20 },
+//     { opacity: 1, y: 0, duration: 1, stagger: 0.3, ease: "power2.out" }
+//   );
+
+//   // Scale animation on hover for product images
+//   const productImages = document.querySelectorAll(".product-card-img");
+//   productImages.forEach((img) => {
+//     img.addEventListener("mouseenter", () => {
+//       gsap.to(img, { scale: 1.1, duration: 0.3, ease: "power1.inOut" });
+//     });
+//     img.addEventListener("mouseleave", () => {
+//       gsap.to(img, { scale: 1, duration: 0.3, ease: "power1.inOut" });
+//     });
+//   });
+
+//   // Add shadow and slight lift on hover for product cards
+//   const productCards = document.querySelectorAll(".product-card");
+//   productCards.forEach((card) => {
+//     card.addEventListener("mouseenter", () => {
+//       gsap.to(card, {
+//         boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+//         y: -10,
+//         duration: 0.3,
+//         ease: "power1.inOut",
+//       });
+//     });
+//     card.addEventListener("mouseleave", () => {
+//       gsap.to(card, {
+//         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+//         y: 0,
+//         duration: 0.3,
+//         ease: "power1.inOut",
+//       });
+//     });
+//   });
+// });

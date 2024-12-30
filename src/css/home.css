@@ -213,73 +213,56 @@ html::-webkit-scrollbar {
 /* ================================ */
 
 /* Product Showcase Section */
-.product-showcase {
-  padding: 30px 15px;
+#products{
+  height: fit-content;
 }
 
-.product-showcase__title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-color);
-}
 
-/* Product Card Container */
-.product-showcase__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-/* Card Styles */
+/* Card Custom Styles */
 .product-card {
   border: none;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: var(--background-light);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  margin: 10px;
-  opacity: 0;
+  box-shadow: var(--lock-shadow-default);
+  /* opacity: 0; Initially hidden for animation */
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(var(--lock-translate));
+  box-shadow: var(--lock-shadow-hover);
 }
 
-.product-card__image {
+.product-card-img {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
-  height: 200px;
   transition: transform 0.3s ease;
 }
 
-.product-card__image:hover {
-  transform: scale(1.05);
+.product-card-img:hover {
+  transform: scale(1.05); /* Zoom effect */
 }
 
-.product-card__body {
+.product-card-body {
   padding: 15px;
 }
 
-.product-card__title {
-  font-size: 1.2rem;
+.product-title {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 10px;
 }
 
-.product-card__price {
+.product-price {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--button-color) !important;
+  color: var(--button-color); /* Green for price */
   margin-bottom: 15px;
 }
 
 /* Footer Button */
-.product-card__footer {
+.product-footer {
   padding: 10px;
   background: none;
   border-top: 1px solid var(--border-dark);
@@ -287,7 +270,7 @@ html::-webkit-scrollbar {
   justify-content: center;
 }
 
-.product-card__button {
+.view-more-btn {
   background-color: var(--button-color);
   color: var(--text-light);
   font-weight: 600;
@@ -298,26 +281,14 @@ html::-webkit-scrollbar {
   transition: background-color 0.3s ease;
 }
 
-.product-card__button:hover {
+.view-more-btn:hover {
   background-color: var(--button-hover-color);
 }
 
 /* Responsive Design */
 @media (max-width: 767px) {
   .product-card {
-    max-width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%; /* Full width on small screens */
   }
-}
-
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem;
-}
-
-.pt-3 {
-  padding-top: 1rem;
 }

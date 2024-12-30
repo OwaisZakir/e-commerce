@@ -1,0 +1,178 @@
+/*
+ * Project Name - Description
+ * Author: Your Name
+ * Date: YYYY-MM-DD
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Add more styles below */
+/* ================================ */
+/* CSS Variables (Custom Properties) */
+/* ================================ */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #004085;
+  --accent-color: #ff7f50;
+  --background-color: #f8f9fa;
+  --button-color: #28a745;
+  --button-hover-color: #218838;
+  --text-color: #343a40;
+  --secondary-text-color: #6c757d;
+  --link-color: #0056b3;
+  --border-color: #d6e4ff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  --border-radius: 12px;
+}
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h3 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Product Title and Description */
+.product-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+/* Price */
+.product-price {
+  font-size: 1.5rem;
+  color: var(--button-color);
+  font-weight: bold;
+}
+
+.product-price span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Product Information */
+.product-category,
+.product-brand,
+.product-sku,
+.product-stock,
+.product-rating,
+.product-warranty,
+.product-shipping,
+.product-availability,
+.product-return-policy {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+}
+
+.product-tags .badge {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  margin-right: 8px;
+}
+
+.product-tags strong {
+  color: var(--primary-color);
+}
+
+/* Product Image */
+.product-image img {
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Button */
+.btn-primary {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Review Section */
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review {
+  background: var(--background-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-dark);
+}
+
+.review p {
+  margin: 8px 0;
+}
+
+.review small {
+  color: var(--secondary-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 2rem;
+  }
+
+  .product-price {
+    font-size: 1.4rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .product-image img {
+    max-width: 90%;
+  }
+}
