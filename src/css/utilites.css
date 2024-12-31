@@ -9,7 +9,7 @@ body {
 section {
   height: 100vh;
   scroll-snap-align: start;
-  scroll-margin-top: 20px;
+  scroll-margin-top: 5rem;
 }
 #extra {
   height: fit-content;

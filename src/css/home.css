@@ -217,6 +217,18 @@ html::-webkit-scrollbar {
   height: fit-content;
 }
 
+#beauty > h1,
+#fragrances >h1 ,
+#groceries > h1,
+#furniture > h1{
+  font-family: "poppins",sans-serif;
+  font-weight: bold;
+  color: var(--text-muted);
+  border-bottom: 2px dotted var(--primary-color);
+  margin-bottom: .5rem;
+}
+
+
 
 /* Card Custom Styles */
 .product-card {
@@ -292,3 +304,4 @@ html::-webkit-scrollbar {
     max-width: 100%; /* Full width on small screens */
   }
 }
+

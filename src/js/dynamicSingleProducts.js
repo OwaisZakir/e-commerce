@@ -73,7 +73,7 @@ window.onload = function () {
         alert(`${productDetails.title} Have Added to Cart`);
       });
 
-      //   localStorage.removeItem("product_id");
+      localStorage.removeItem("product_id");
     })
     .catch((err) => {
       console.log(err);
