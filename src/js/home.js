@@ -238,14 +238,42 @@ async function getPostsFromAPI() {
 }
 
 let posts = getPostsFromAPI();
+let blogPostsContainer = document.getElementById("blog-posts");
 
 posts
   .then((blogs) => {
-    let blog = blogs.posts;
-    blog.map((blog)=>{
-      console.log(blog);
-    })
+    let blogArray = blogs.posts; // Assuming this is your blog data
+
+    console.log(blogArray);
+
+    blogArray.map((blog) => {
+      blogPostsContainer.innerHTML += `
+    <div class="col-12 col-md-6 col-lg-auto blog-card">
+      <div class="blog-card-inner">
+        <div class="blog-card-content">
+          <h3 class="blog-title">${blog.title}</h3>
+          <p class="blog-body">${blog.body}</p>
+          <p class="blog-tags">Tags: ${blog.tags.join(", ")}</p>
+          <p class="blog-reactions">Likes: ${
+            blog.reactions.likes
+          } | Dislikes: ${blog.reactions.dislikes}</p>
+          <p class="blog-views">Views: ${blog.views}</p>
+        </div>
+      </div>
+    </div>
+  `;
+    });
   })
   .catch((error) => {
     console.log(error);
   });
+
+// GSAP animation
+gsap.from(".blog-card", {
+  opacity: 1,
+  y: 20,
+  duration: 1,
+  stagger: 0.3,
+  ease: "power4.out",
+  onComplete: () => console.log("GSAP animation completed."),
+});

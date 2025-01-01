@@ -213,22 +213,20 @@ html::-webkit-scrollbar {
 /* ================================ */
 
 /* Product Showcase Section */
-#products{
+#products {
   height: fit-content;
 }
 
 #beauty > h1,
-#fragrances >h1 ,
+#fragrances > h1,
 #groceries > h1,
-#furniture > h1{
-  font-family: "poppins",sans-serif;
+#furniture > h1 {
+  font-family: "poppins", sans-serif;
   font-weight: bold;
   color: var(--text-muted);
-  border-bottom: 2px dotted var(--primary-color);
-  margin-bottom: .5rem;
+  border-bottom: 3px solid var(--accent-color);
+  margin-bottom: 0.5rem;
 }
-
-
 
 /* Card Custom Styles */
 .product-card {
@@ -305,3 +303,62 @@ html::-webkit-scrollbar {
   }
 }
 
+/* ==========================================================
+  =========== Blogs ==============
+ ========================================================== */
+
+#blog-section {
+  padding: 2rem 0;
+  height: fit-content;
+  overflow: hidden;
+}
+
+#blog-section h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: box-shadow 0.3s ease;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.blog-body {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.blog-tags {
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.blog-reactions {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.blog-views {
+  font-size: 0.875rem;
+  color: #999;
+}
