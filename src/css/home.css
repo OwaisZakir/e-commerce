@@ -307,10 +307,8 @@ html::-webkit-scrollbar {
   =========== Blogs ==============
  ========================================================== */
 
-#blog-section {
+ #blog-section {
   padding: 2rem 0;
-  height: fit-content;
-  overflow: hidden;
 }
 
 #blog-section h2 {
@@ -322,9 +320,10 @@ html::-webkit-scrollbar {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
+  margin-bottom: 2rem;
   opacity: 1;
-  transform: translateY(20px);
-  transition: box-shadow 0.3s ease;
+  /*Startwithhiddencards*/transform: translateY(20px);
+  /*Startwithcardsmoveddown*/transition: box-shadow 0.3s ease;
   -webkit-transform: translateY(20px);
   -moz-transform: translateY(20px);
   -ms-transform: translateY(20px);

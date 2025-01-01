@@ -244,11 +244,9 @@ posts
   .then((blogs) => {
     let blogArray = blogs.posts; // Assuming this is your blog data
 
-    console.log(blogArray);
-
     blogArray.map((blog) => {
       blogPostsContainer.innerHTML += `
-    <div class="col-12 col-md-6 col-lg-auto blog-card">
+    <div class="col-md-4 blog-card">
       <div class="blog-card-inner">
         <div class="blog-card-content">
           <h3 class="blog-title">${blog.title}</h3>
