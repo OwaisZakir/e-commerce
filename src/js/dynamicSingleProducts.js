@@ -69,8 +69,7 @@ window.onload = function () {
       //   ====================
       // Add event listener for the "Add to Cart" button
       document.querySelector(".btn-primary").addEventListener("click", () => {
-        console.log("Button clicked");
-        alert(`${productDetails.title} Have Added to Cart`);
+        window.location.href = "../pages/login.html";
       });
 
       localStorage.removeItem("product_id");

@@ -2,9 +2,7 @@
 
 let token = localStorage.getItem("access_token");
 if (token) {
-  setTimeout(() => {
-    window.location.href = "./src/pages/home.html";
-  }, 2000);
+  window.location.href = "../../index.html";
 } else {
   document
     .getElementById("loginForm")
@@ -40,8 +38,8 @@ if (token) {
       if (accessToken) {
         localStorage.setItem("access_token", accessToken);
         setTimeout(() => {
-          window.location.href = "./src/pages/home.html";
-        }, 1000);
+          window.location.href = "../../index.html";
+        }, 500);
       } else {
         alert("Invalid username or password.");
         return;
@@ -54,10 +52,10 @@ if (token) {
 
 // Image array and image element
 const images = [
-  "./src/assets/images/login/illustration1.svg",
-  "./src/assets/images/login/illustration2.svg",
-  "./src/assets/images/login/illustration3.svg",
-  "./src/assets/images/login/illustration4.svg",
+  "../assets/images/login/illustration1.svg",
+  "../assets/images/login/illustration2.svg",
+  "../assets/images/login/illustration3.svg",
+  "../assets/images/login/illustration4.svg",
 ];
 
 let currentImageIndex = 0;

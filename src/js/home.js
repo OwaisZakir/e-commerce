@@ -198,7 +198,7 @@ productData
                 <h5 class="card-text product-price">${item.price}</h5>
             </div>
             <div class="card-footer product-footer">
-                <a href="#" class="btn view-more-btn" onClick="productId  (${item.id})">View More</a>
+                <button class="btn view-more-btn" onClick="productId  (${item.id})">View More</button>
             </div>
             </div>
           </div>
@@ -216,7 +216,7 @@ function productId(productId) {
   console.log(productId);
   localStorage.setItem("product_id", productId);
   setTimeout(() => {
-    window.location.href = "./dynamicSingleProducts.html";
+    window.location.href = "./src/pages/dynamicSingleProducts.html";
     // console.log(url);
   }, 500);
 }
